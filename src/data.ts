@@ -1,4 +1,17 @@
-const data = [
+export enum CollectionType{
+  SPACE="space",
+  LIST="list",
+  FOLDER="folder"
+}
+export interface DataProps{
+  uuid: string,
+  collection_type:CollectionType |string,
+  external_id: string,
+  name: string,
+  children: DataProps[]
+}
+
+export const data:DataProps[] = [
   {
     uuid: "98793e03-bcef-4c05-a24a-3dcd5a1c4475",
     collection_type: "space",
